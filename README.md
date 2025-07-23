@@ -72,8 +72,8 @@ Make sure you have **Node.js** (version 18.x or higher) and a package manager li
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/star-wars-hub.git # Replace with your repo URL
-cd star-wars-hub
+git clone https://github.com/dangnguyenquang/Marketing-website-Star-Wars.git
+cd Marketing-website-Star-Wars
 ```
 
 2. Install dependencies:
@@ -136,28 +136,30 @@ This will run the optimized Next.js application.
 ## Project Structure
 ```bash
 .
-├── app/                      # Next.js App Router (main application logic)
-│   ├── (public-routes)/      # Group for public-facing pages
-│   │   ├── films/            # Film listing page and dynamic film detail route
-│   │   │   ├── [id]/         # Dynamic route for individual film details
-│   │   │   │   └── page.tsx  # Film detail page (Server Component)
-│   │   │   └── page.tsx      # Films list page (Client Component with search/filter)
-│   │   ├── layout.tsx        # Root layout for public routes
-│   │   └── page.tsx          # Homepage
-│   ├── favicon.ico           # Application favicon
-│   ├── globals.css           # Global styles (Tailwind CSS base)
-│   └── layout.tsx            # Root HTML structure and metadata
-├── components/               # Reusable UI components (e.g., Shadcn UI)
-├── configs/                  # Configuration files (e.g., PATH_NAME)
-├── graphql/                  # GraphQL client setup and queries
-│   ├── client.ts             # GraphQL client instance
-│   └── queries/              # GraphQL query definitions
-├── interfaces/               # TypeScript interfaces for API responses
-├── public/                   # Static assets (images, favicons, etc.)
-│   ├── favicon/              # Favicon files
-│   └── images/               # Background images, etc.
-├── types/                    # TypeScript type definitions
-└── utils/                    # Utility functions (e.g., ID decoding)
+├── app/                      
+│   ├── (public-routes)/      
+│   │   ├── films/            
+│   │   │   ├── [id]/         
+│   │   │   │   └── page.tsx  
+│   │   │   └── page.tsx      
+│   │   ├── characters/       
+│   │   │   └── page.tsx      
+│   │   ├── layout.tsx        
+│   │   └── page.tsx          
+│   ├── favicon.ico           
+│   └── layout.tsx            
+├── components/               
+├── configs/                  
+├── graphql/                  
+│   ├── client.ts             
+│   └── queries/              
+├── lib/                      
+├── public/                   
+│   ├── favicon/              
+│   └── images/               
+├── styles/                   
+│   └── globals.css           
+└── types/                    
 ```
 
 
