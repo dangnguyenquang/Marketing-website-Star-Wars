@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import ClientBackground from "@/components/ui/ClientBackground";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -115,9 +116,11 @@ export default function RootLayout({
       >
         <ClientBackground />
         {/* <div className="fixed inset-0 bg-black opacity-70 -z-10"></div> */}
-        <Header />
-        <div className="content-center min-h-screen">{children}</div>
-        <Footer />
+        <Suspense>
+          <Header />
+          <div className="content-center min-h-screen">{children}</div>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
