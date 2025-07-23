@@ -17,7 +17,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // --- Basic Metadata ---
   title: "Star Wars Hub – Your Definitive Star Wars Wiki & Information Center",
   description:
     "Explore the vast Star Wars universe with our comprehensive wiki. Find detailed information on movies, characters, planets, starships, species, lore, and more from the Skywalker Saga to The Mandalorian.",
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
       "Star Wars Hub – Your Definitive Star Wars Wiki & Information Center",
     description:
       "Explore the vast Star Wars universe with our comprehensive wiki. Find detailed information on movies, characters, planets, starships, species, lore, and more from the Skywalker Saga to The Mandalorian.",
-    url: "https://yourstarwarshub.com", 
+    url: "https://marketing-website-star-wars.vercel.app", 
     images: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png",
@@ -76,7 +75,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    // canonical: "",
+    canonical: "https://marketing-website-star-wars.vercel.app",
   },
 
   verification: {
@@ -90,10 +89,10 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon/favicon_io/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/icon/favicon_io/favicon-32x32.png", sizes: "96x96", type: "image/png" },
     ],
-    shortcut: "/favicon/favicon.ico",
+    shortcut: "/icon/favicon_io/favicon.ico",
     apple: [
       {
         url: "/favicon/apple-touch-icon.png",

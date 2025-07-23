@@ -1,8 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Star Wars Hub: Your Galaxy's Guide
+
+Welcome to **Star Wars Hub**, a comprehensive wiki and information center for the entire Star Wars universe! Built with **Next.js 14 (App Router)**, this project aims to be your go-to destination for exploring films, characters, planets, starships, and the rich lore of a galaxy far, far away.
+
+Whether you're a seasoned Jedi Master or a curious Padawan, **Star Wars Hub** offers a user-friendly interface to navigate through detailed information, ensuring you always have the knowledge of the Force at your fingertips.
+
+---
+
+## Features
+
+### Extensive Star Wars Database
+
+Explore a vast collection of data on:
+
+- **Films**: Dive into each iconic movie, from the original trilogy to the latest sagas.
+- **Characters**: Discover heroes, villains, and everything in between, with details on their species and home planets.
+- **Planets**: Journey to diverse worlds across the galaxy.
+- **Starships & Vehicles**: Get up close with the most famous vessels.
+- **Species**: Learn about the myriad of creatures inhabiting the Star Wars galaxy.
+
+### Intuitive Search & Filtering
+
+Easily find what you're looking for with robust search capabilities and flexible filtering options (e.g., filter films by title, sort by release date).
+
+### Dynamic Routing
+
+Seamlessly navigate between list pages and detailed individual entries (e.g., `/films` to `/films/A_New_Hope`).
+
+### Responsive Design
+
+Enjoy a consistent experience across desktops, tablets, and mobile devices.
+
+### Optimized Performance
+
+Leverages **Next.js's** features for fast loading times and a smooth user experience.
+
+---
+
+## Technologies Used
+
+- **Next.js 14 (App Router)**  
+  The powerful React framework for building performant and SEO-friendly web applications.
+  - **Server Components**: For efficient data fetching and initial page rendering.
+  - **Client Components**: For interactive UI elements and dynamic content.
+
+- **React**: For building the user interface.
+
+- **TypeScript**: For type safety and improved developer experience.
+
+- **GraphQL**: For efficient and flexible data fetching from the Star Wars API.
+  - `graphql-request`: A lightweight GraphQL client.
+
+- **Tailwind CSS**: For rapid and consistent UI styling.
+
+- **next/font**: Optimizes and loads custom fonts for improved performance.
+
+- `useParams` & `useSearchParams`: Next.js hooks for handling dynamic routes and URL query parameters.
+
+- `<Suspense>`: For gracefully handling asynchronous operations and providing loading fallbacks.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have **Node.js** (version 18.x or higher) and a package manager like **npm**, **Yarn**, **pnpm**, or **Bun** installed.
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/star-wars-hub.git # Replace with your repo URL
+cd star-wars-hub
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### Running the Development Server
+To start the development server:
 
 ```bash
 npm run dev
@@ -14,23 +98,64 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to view the application. The app will hot-reload as you make changes to the code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
+To build the application for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+# or
+bun build
+```
+This command will generate the optimized build in the .next folder.
 
-## Learn More
+### Running in Production Mode (Locally)
+After building, you can serve the production build locally:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+# or
+yarn start
+# or
+pnpm start
+# or
+bun start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This will run the optimized Next.js application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
+```bash
+.
+├── app/                      # Next.js App Router (main application logic)
+│   ├── (public-routes)/      # Group for public-facing pages
+│   │   ├── films/            # Film listing page and dynamic film detail route
+│   │   │   ├── [id]/         # Dynamic route for individual film details
+│   │   │   │   └── page.tsx  # Film detail page (Server Component)
+│   │   │   └── page.tsx      # Films list page (Client Component with search/filter)
+│   │   ├── layout.tsx        # Root layout for public routes
+│   │   └── page.tsx          # Homepage
+│   ├── favicon.ico           # Application favicon
+│   ├── globals.css           # Global styles (Tailwind CSS base)
+│   └── layout.tsx            # Root HTML structure and metadata
+├── components/               # Reusable UI components (e.g., Shadcn UI)
+├── configs/                  # Configuration files (e.g., PATH_NAME)
+├── graphql/                  # GraphQL client setup and queries
+│   ├── client.ts             # GraphQL client instance
+│   └── queries/              # GraphQL query definitions
+├── interfaces/               # TypeScript interfaces for API responses
+├── public/                   # Static assets (images, favicons, etc.)
+│   ├── favicon/              # Favicon files
+│   └── images/               # Background images, etc.
+├── types/                    # TypeScript type definitions
+└── utils/                    # Utility functions (e.g., ID decoding)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
