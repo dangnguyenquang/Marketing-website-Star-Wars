@@ -4,6 +4,8 @@ Welcome to **Star Wars Hub**, a comprehensive wiki and information center for th
 
 Whether you're a seasoned Jedi Master or a curious Padawan, **Star Wars Hub** offers a user-friendly interface to navigate through detailed information, ensuring you always have the knowledge of the Force at your fingertips.
 
+<img width="4095" height="2328" alt="image" src="https://github.com/user-attachments/assets/d05b2817-c0f9-4f5b-8b24-c060cb05e581" />
+
 ---
 
 ## Features
